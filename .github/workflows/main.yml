@@ -29,8 +29,8 @@ jobs:
         pwd && ls
         docker build -t joeuni01/backend:${{ github.run_number }} ./backend
         docker build -t joeuni01/frontend:${{ github.run_number }} ./frontend
-        docker tag joeuni01/frontend:${{ github.run_number }} oolralra/frontend:latest
-        docker tag joeuni01/backend:${{ github.run_number }} oolralra/backend:latest
+        docker tag joeuni01/frontend:${{ github.run_number }} joeuni01/frontend:latest
+        docker tag joeuni01/backend:${{ github.run_number }} joeuni01/backend:latest
         
     # 5. Docker Hub에 이미지 푸시
     - name: Push Docker image to Docker Hub
