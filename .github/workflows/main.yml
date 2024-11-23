@@ -35,6 +35,7 @@ jobs:
     # 5. Docker Hub에 이미지 푸시
     - name: Push Docker image to Docker Hub
       run: |
+        docker image ls
         docker push joeuni01/backend:${{ github.run_number }}
         docker push joeuni01/frontend:${{ github.run_number }}
         docker push joeuni01/backend:latest
